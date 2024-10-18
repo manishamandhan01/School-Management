@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import SideBar from "./SideBar";
 import Footer from "./Footer";
-import { Students } from "../Pages/Students";
 
 const Layout = () => {
   return (
@@ -19,25 +18,16 @@ const Layout = () => {
         />
       </div>
       <Header />
+      <div className="row">
       <SideBar />
-
-      {/* <!-- Content Wrapper. Contains page content --> */}
-      <div className="content-wrapper">
-        {/* <!-- Content Header (Page header) --> */}
-
-        {/* <!-- /.content-header --> */}
-
-        {/* <!-- Main content --> */}
-        <Students/>
-        <Outlet />
+      <Outlet />
       </div>
+      
+
+     
       <Footer />
 
-      {/* <!-- Control Sidebar --> */}
-      <aside className="control-sidebar control-sidebar-dark">
-        {/* <!-- Control sidebar content goes here --> */}
-      </aside>
-      {/* <!-- /.control-sidebar --> */}
+     
     </div>
   );
 };

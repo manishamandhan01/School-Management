@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import SideBarData from "../Data/SideBarData";
 import { ListItemIcon } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 const SideBar = () => {
   return (
@@ -16,15 +17,15 @@ const SideBar = () => {
               return (
                 <Menu className="bg-[rgb(4,41,84)] text-[rgb(158,168,181)] text-lg hover:text-black ">
                   {item.subNav && item.subNav.length > 0 ? (
-                    <SubMenu icon={item.icon} label={item.title}>
+                    <SubMenu icon={item.icon} label={item.title} >
                       {item.subNav?.map((subItem, index) => {
                         return (
                           <MenuItem className="bg-[rgb(5,31,62)] text-[rgb(158,168,181)]  text-lg hover:text-black">
                             <ListItemIcon >
                               {subItem.icon}
                             </ListItemIcon>
-
-                            {subItem.title}
+                            <NavLink to={subItem.path}>{subItem.title}</NavLink>
+                            
                           </MenuItem>
                         );
                       })}
@@ -33,7 +34,8 @@ const SideBar = () => {
                     <MenuItem className="bg-[rgb(4,41,84)] text-[rgb(158,168,181)] text-lg hover:text-black">
                       <ListItemIcon>{item.icon}</ListItemIcon>
 
-                      {item.title}
+                      <NavLink to={item.path}>{item.title}</NavLink>
+                      
                     </MenuItem>
                   )}
                 </Menu>
@@ -45,7 +47,7 @@ const SideBar = () => {
           </Sidebar>
         </div>
 
-        <h1>WELCOME TO QUICKPAY</h1>
+       
       </div>
     </>
   );
