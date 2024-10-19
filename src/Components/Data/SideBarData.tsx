@@ -16,7 +16,7 @@ const SideBarData = [
   {
     title: "Students",
     path: "#",
-    icon: <FaPeopleLine />,
+    icon: "fa-tachometer-alt",
     iconClosed: <IoIosArrowUp />,
     iconOpen: <MdKeyboardArrowRight />,
 
@@ -152,7 +152,7 @@ const SideBarData = [
   {
     title: "Subject",
     path: "#",
-    icon: <IoBookSharp />,
+    icon: "fa-tachometer-alt",
   },
   {
     title: "Class Routine",

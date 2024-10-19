@@ -1,25 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { CommonConstants } from "../Common/Constants";
 import { CommonList } from "../Lists/CommonList";
+import { GridColDef } from "@mui/x-data-grid";
 
-interface IProps{
-  entity:string;
+interface IProps {
+  entity: string;
 }
 
-export const CommonFetch :React.FC<IProps>=({entity}) => {
-
+export const CommonFetch: React.FC<IProps> = ({ entity }) => {
   console.log(entity);
-//   Object.keys(CommonConstants.entityMap).forEach(key => {
-//     if (key === entity) {
-//         let value = CommonConstants.entityMap[ key as keyof CommonConstants.entityMap];
-//     }
-// });
-//   console.log(CommonConstants.entityMap[entity as keyof typeof String].list);
-// const propertyPath = "entityMap.student";
-// const propertyValue = propertyPath.split('.').reduce((obj, key) => obj?.[key], CommonConstants);
-
 
   const [items, setItems] = useState([]);
+  const [header,setHeader] = useState("");
+  const [columns,setColumns]= useState<GridColDef[]>([]);
 
   const fetchData = async () => {
     const data = await fetch(
@@ -28,12 +21,13 @@ export const CommonFetch :React.FC<IProps>=({entity}) => {
     const json = await data.json();
     setItems(json);
   };
-
+  
   useEffect(() => {
     fetchData();
+    setHeader(CommonConstants.entityMap[entity as keyof typeof CommonConstants.entityMap].header);
+    setColumns(CommonConstants.entityMap[entity as keyof typeof CommonConstants.entityMap].columns)
+
   }, []);
 
-  return (
-    <CommonList items={items} />
-  );
+  return <CommonList items={items} headertext={header} columns={columns}/>;
 };

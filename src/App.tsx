@@ -4,7 +4,6 @@ import Layout from "./Components/Layout/Layout";
 import { RouteObject, useRoutes } from "react-router-dom";
 import Dashboard from "./Components/Pages/Dashboard";
 import { CommonFetch } from "./Components/Pages/CommonFetch";
-import { Students } from "./Components/Pages/Students";
 
 
 function App() {
@@ -22,7 +21,11 @@ function App() {
         path:"/students",
         element:<CommonFetch entity="student"  />,
 
-    }
+    },{
+      path:"/teachers",
+      element:<CommonFetch entity="teacher"  />,
+
+  }
     ],
     
     },

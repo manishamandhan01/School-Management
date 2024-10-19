@@ -6,7 +6,8 @@ export interface IStudentDetails{
     section:string,
     parents:string,
     address:string,
-    dateOfbirth:Date,
+    dateOfBirth:Date,
     phoneNo:string,
     emailId:string,
 }
+

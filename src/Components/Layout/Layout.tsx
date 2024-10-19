@@ -18,18 +18,11 @@ const Layout = () => {
         />
       </div>
       <Header />
-     <div className="row">
       <SideBar />
-      <Outlet />
+      <div className="content-wrapper">
+        <Outlet />
       </div>
-     
-     
-      
-
-     
       <Footer />
-
-     
     </div>
   );
 };
