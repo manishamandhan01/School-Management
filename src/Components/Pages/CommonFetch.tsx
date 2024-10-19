@@ -15,15 +15,15 @@ export const CommonFetch :React.FC<IProps>=({entity}) => {
 //     }
 // });
 //   console.log(CommonConstants.entityMap[entity as keyof typeof String].list);
-const propertyPath = "entityMap.student";
-const propertyValue = propertyPath.split('.').reduce((obj, key) => obj?.[key], CommonConstants);
+// const propertyPath = "entityMap.student";
+// const propertyValue = propertyPath.split('.').reduce((obj, key) => obj?.[key], CommonConstants);
 
 
   const [items, setItems] = useState([]);
 
   const fetchData = async () => {
     const data = await fetch(
-      `${CommonConstants.baseUrl}/${CommonConstants.entityMap.student.list}`
+      `${CommonConstants.baseUrl}/${CommonConstants.entityMap[entity as keyof typeof CommonConstants.entityMap].list}`
     );
     const json = await data.json();
     setItems(json);

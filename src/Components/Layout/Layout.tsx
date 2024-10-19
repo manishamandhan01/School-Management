@@ -18,10 +18,12 @@ const Layout = () => {
         />
       </div>
       <Header />
-      <div className="row">
+     <div className="row">
       <SideBar />
       <Outlet />
       </div>
+     
+     
       
 
      

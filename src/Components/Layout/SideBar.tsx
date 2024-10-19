@@ -1,54 +1,103 @@
-import React from "react";
+import React, { useState } from "react";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import SideBarData from "../Data/SideBarData";
 import { ListItemIcon } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 const SideBar = () => {
+
   return (
     <>
-      <div
-        style={{ display: "flex", height: "100vh" }}
-        className="bg-[rgb(240,241,243)]"
-      >
-        <div className="bg-[rgb(4,41,84)]">
-          <Sidebar className="app ">
-            {SideBarData.map((item, index) => {
-              return (
-                <Menu className="bg-[rgb(4,41,84)] text-[rgb(158,168,181)] text-lg hover:text-black ">
-                  {item.subNav && item.subNav.length > 0 ? (
-                    <SubMenu icon={item.icon} label={item.title} >
-                      {item.subNav?.map((subItem, index) => {
-                        return (
-                          <MenuItem className="bg-[rgb(5,31,62)] text-[rgb(158,168,181)]  text-lg hover:text-black">
-                            <ListItemIcon >
-                              {subItem.icon}
-                            </ListItemIcon>
-                            <NavLink to={subItem.path}>{subItem.title}</NavLink>
-                            
-                          </MenuItem>
-                        );
-                      })}
-                    </SubMenu>
-                  ) : (
-                    <MenuItem className="bg-[rgb(4,41,84)] text-[rgb(158,168,181)] text-lg hover:text-black">
-                      <ListItemIcon>{item.icon}</ListItemIcon>
+      <aside className="main-sidebar sidebar-dark-primary elevation-4">
 
-                      <NavLink to={item.path}>{item.title}</NavLink>
-                      
-                    </MenuItem>
-                  )}
-                </Menu>
-              );
-            })}
-            <Menu className="bg-[rgb(4,41,84)] text-[rgb(158,168,181)] text-lg hover:text-black">
-              <MenuItem> Logout </MenuItem>
-            </Menu>
-          </Sidebar>
+        <a href="index3.html" className="brand-link">
+          <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{opacity: .8}} />
+          <span className="brand-text font-weight-light">AdminLTE 3</span>
+        </a>
+
+        <div className="sidebar">
+
+          <div className="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div className="image">
+              <img src="dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
+            </div>
+            <div className="info">
+              <a href="#" className="d-block">Alexander Pierce</a>
+            </div>
+          </div>
+
+
+          <nav className="mt-2">
+            <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+              {SideBarData.map((item, index) => {
+                return (
+                  <li className="nav-item">
+
+
+                    {item.subNav && item.subNav.length > 0 ? (
+                      <>
+                        <a href="#" className="nav-link ">
+                          {item.icon}
+                          <p>
+                            {item.title}
+                            <i className="right fas fa-angle-left"></i>
+                          </p>
+                        </a>
+                        <ul className="nav nav-treeview">
+                          {item.subNav?.map((subItem, index) => {
+                            return (
+                              <li className="nav-item">
+                                <a href={subItem.path} className="nav-link">
+                                  {/* <i className="far fa-circle nav-icon"></i> */}
+                                  <p>{subItem.title}</p>
+                                </a>
+                              </li>
+
+                            );
+                          })}
+                        </ul>
+                      </>
+
+                    ) : (
+                      <li className="nav-item">
+                        <a href={item.path} className="nav-link ">
+                          {item.icon}
+                          <p>{item.title}</p>
+                        </a>
+                      </li>
+                    )}
+
+                   
+                  </li>
+                );
+              })}
+               <li className="nav-item">
+                      <a href="/" className="nav-link ">
+                        <i className="nav-icon far fa-image"></i>
+                        <p>
+                          Logout
+                        </p>
+                      </a>
+                    </li>
+            </ul>
+          </nav>
+
         </div>
 
-       
-      </div>
+      </aside>
+
+
+
+
+
+      <Menu className="bg-[rgb(4,41,84)] text-[rgb(158,168,181)] text-lg hover:text-black">
+        <MenuItem> Logout </MenuItem>
+      </Menu>
+
+
+
+
     </>
   );
 };
