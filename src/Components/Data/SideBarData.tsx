@@ -16,75 +16,60 @@ const SideBarData = [
   {
     title: "Students",
     path: "#",
-    icon: <FaPeopleLine />,
-    iconClosed: <IoIosArrowUp />,
-    iconOpen: <MdKeyboardArrowRight />,
+    icon: "fa-graduation-cap",
 
     subNav: [
       {
         title: "All Students",
         path: "/students",
-        icon: <MdKeyboardArrowRight />,
       },
       {
         title: "Student Details",
         path: "/studentDetails",
-        icon: <MdKeyboardArrowRight />,
       },
       {
         title: "Adminssion Form",
         path: "/admissionForm",
-        icon: <MdKeyboardArrowRight />,
       },
     ],
   },
   {
     title: "Teachers",
     path: "#",
-    icon: <FaChalkboardTeacher />,
-    iconClosed: <IoIosArrowUp />,
-    iconOpen: <MdKeyboardArrowRight />,
+    icon: "fa-person-chalkboard",
 
     subNav: [
       {
         title: "All Teachers",
         path: "/teachers",
-        icon: <MdKeyboardArrowRight />,
       },
       {
         title: "Teacher Details",
         path: "/teacherDetails",
-        icon: <MdKeyboardArrowRight />,
       },
       {
         title: "Add Teacher",
         path: "/addTeacher",
-        icon: <MdKeyboardArrowRight />,
       },
     ],
   },
   {
     title: "Parents",
     path: "#",
-    icon: <RiParentFill />,
-    iconClosed: <IoIosArrowUp />,
-    iconOpen: <MdKeyboardArrowRight />,
+    icon: "fa-person-shelter",
 
     subNav: [
       {
         title: "All Parents",
         path: "/parents",
-        icon: <MdKeyboardArrowRight />,
       },
       {
         title: "Parent Details",
         path: "/parentDetails",
-        icon: <MdKeyboardArrowRight />,
       },
       {
         title: "Add Parent",
         path: "/addparent",
-        icon: <MdKeyboardArrowRight />,
       },
     ],
   },
@@ -92,87 +77,75 @@ const SideBarData = [
   {
     title: "Library",
     path: "#",
-    icon: <IoLibrary />,
-    iconClosed: <IoIosArrowUp />,
-    iconOpen: <MdKeyboardArrowRight />,
+    icon: "fa-book-open-reader",
 
     subNav: [
       {
         title: "All Book",
         path: "/parents",
-        icon: <MdKeyboardArrowRight />,
       },
       {
         title: "Add New Book",
         path: "/parentDetails",
-        icon: <MdKeyboardArrowRight />,
       },
     ],
   },
   {
     title: "Class",
     path: "#",
-    icon: <SiGoogleclassroom />,
-    iconClosed: <IoIosArrowUp />,
-    iconOpen: <MdKeyboardArrowRight />,
+    icon: "fa-chalkboard-user",
 
     subNav: [
       {
         title: "All Classes",
         path: "/parents",
-        icon: <MdKeyboardArrowRight />,
       },
       {
         title: "Add New Class",
         path: "/parentDetails",
-        icon: <MdKeyboardArrowRight />,
       },
     ],
   },
   {
     title: "Exam",
     path: "#",
-    icon: <GoChecklist />,
-    iconClosed: <IoIosArrowUp />,
-    iconOpen: <MdKeyboardArrowRight />,
+    icon: "fa-list-check",
 
     subNav: [
       {
         title: "Exam  Schedule",
         path: "/parents",
-        icon: <MdKeyboardArrowRight />,
       },
       {
         title: "Exam Grades ",
         path: "/parentDetails",
-        icon: <MdKeyboardArrowRight />,
       },
     ],
   },
   {
     title: "Subject",
     path: "#",
-    icon: <IoBookSharp />,
+    icon: "fa-book",
   },
-  {
-    title: "Class Routine",
-    path: "#",
-    icon: <MdAddTask />,
-  },
-  {
-    title: "Attendence",
-    path: "#",
-    icon: <BiBuilding />,
-  },
+  // {
+  //   title: "Class Routine",
+  //   path: "#",
+  //   icon: <MdAddTask />,
+  // },
+  // {
+  //   title: "Attendence",
+  //   path: "#",
+  //   icon: <BiBuilding />,
+  // },
   {
     title: "Transport",
     path: "#",
-    icon: <MdEmojiTransportation />,
+    icon: "fa-bus",
   },
   {
     title: "Hostel",
     path: "#",
-    icon: <IoBedSharp />,
+    icon: "fa-bed",
   },
 ];
 
