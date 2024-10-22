@@ -40,7 +40,7 @@ const SideBar = () => {
             >
               {SideBarData.map((item, index) => {
                 return (
-                  <li className="nav-item">
+                  <li className="nav-item menu-open">
                     {item.subNav && item.subNav.length > 0 ? (
                       <>
                         <a href="#" className="nav-link">
@@ -64,12 +64,15 @@ const SideBar = () => {
                         </ul>
                       </>
                     ) : (
-                      <li className="nav-item">
+                      // <li className="nav-item">
+                      <>
                         <a href={item.path} className="nav-link ">
-                        <i className={`nav-icon fas ${item.icon}`}></i>
+                          <i className={`nav-icon fas ${item.icon}`}></i>
                           <p>{item.title}</p>
                         </a>
-                      </li>
+                      </>
+
+                      // </li>
                     )}
                   </li>
                 );
@@ -85,7 +88,7 @@ const SideBar = () => {
         </div>
       </aside>
 
-      
+
     </>
   );
 };

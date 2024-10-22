@@ -1,22 +1,8 @@
-import React from "react";
-import { MdKeyboardArrowRight } from "react-icons/md";
-import { IoIosArrowUp } from "react-icons/io";
-import { FaPeopleLine } from "react-icons/fa6";
-import { FaChalkboardTeacher } from "react-icons/fa";
-import { RiParentFill } from "react-icons/ri";
-import { IoLibrary } from "react-icons/io5";
-import { SiGoogleclassroom } from "react-icons/si";
-import { GoChecklist } from "react-icons/go";
-import { IoBookSharp } from "react-icons/io5";
-import { MdAddTask } from "react-icons/md";
-import { BiBuilding } from "react-icons/bi";
-import { MdEmojiTransportation } from "react-icons/md";
-import { IoBedSharp } from "react-icons/io5";
 const SideBarData = [
   {
     title: "Students",
     path: "#",
-    icon: "fa-graduation-cap",
+    icon: " fa-graduation-cap",
 
     subNav: [
       {
@@ -36,7 +22,7 @@ const SideBarData = [
   {
     title: "Teachers",
     path: "#",
-    icon: "fa-person-chalkboard",
+    icon: "fa-chalkboard-teacher",
 
     subNav: [
       {
@@ -56,7 +42,7 @@ const SideBarData = [
   {
     title: "Parents",
     path: "#",
-    icon: "fa-person-shelter",
+    icon: "fa-house-user",
 
     subNav: [
       {
@@ -77,7 +63,7 @@ const SideBarData = [
   {
     title: "Library",
     path: "#",
-    icon: "fa-book-open-reader",
+    icon: "fa-book",
 
     subNav: [
       {
@@ -93,7 +79,7 @@ const SideBarData = [
   {
     title: "Class",
     path: "#",
-    icon: "fa-chalkboard-user",
+    icon: "fa-chalkboard",
 
     subNav: [
       {
@@ -109,7 +95,7 @@ const SideBarData = [
   {
     title: "Exam",
     path: "#",
-    icon: "fa-list-check",
+    icon: "fa-check-square",
 
     subNav: [
       {
@@ -125,7 +111,7 @@ const SideBarData = [
   {
     title: "Subject",
     path: "#",
-    icon: "fa-book",
+    icon: "fa-book-open",
   },
   // {
   //   title: "Class Routine",

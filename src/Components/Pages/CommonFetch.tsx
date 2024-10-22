@@ -24,7 +24,7 @@ export const CommonFetch: React.FC<IProps> = ({ entity }) => {
   
   useEffect(() => {
     fetchData();
-    setHeader(CommonConstants.entityMap[entity as keyof typeof CommonConstants.entityMap].header);
+    setHeader(CommonConstants.entityMap[entity as keyof typeof CommonConstants.entityMap].listheader);
     setColumns(CommonConstants.entityMap[entity as keyof typeof CommonConstants.entityMap].columns)
 
   }, []);

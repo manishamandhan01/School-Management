@@ -2,7 +2,9 @@ import { GridColDef } from "@mui/x-data-grid";
 
 export interface IEntityConfig {
   list: string;
-  header: string;
+  listheader: string;
+  addHeader:string;
+  editHeader:string;
   columns: GridColDef[];
 }
 export interface IEntityMap {
@@ -18,61 +20,64 @@ export const CommonConstants: ICommonConstants = {
   entityMap: {
     student: {
       list: "b/PAI7",
-      header: "All Students",
+      listheader: "All Students",
+      addHeader:"Add Student",
+      editHeader :"edit Student",
+      
       columns: [
-        { field: "rollNo", headerName: "rollNo", flex: 1 },
+        { field: "rollNo", headerName: "RollNo", flex: 1 },
         {
           field: "name",
-          headerName: "name",
+          headerName: "Name",
           flex: 1,
           editable: true,
         },
         {
           field: "gender",
-          headerName: "gender",
+          headerName: "Gender",
           flex: 1,
           editable: true,
         },
         {
           field: "class",
-          headerName: "class",
+          headerName: "Class",
           flex: 1,
           editable: true,
         },
         {
           field: "section",
-          headerName: "section",
+          headerName: "Section",
           flex: 1,
           editable: true,
         },
         {
           field: "parents",
-          headerName: "parents",
+          headerName: "Parents",
           flex: 1,
           editable: true,
         },
         {
           field: "address",
-          headerName: "address",
+          headerName: "Address",
           flex: 1,
           editable: true,
         },
         {
           field: "dateOfBirth",
-          headerName: "dateOfBirth",
+          headerName: "Date Of Birth",
           flex: 1,
           editable: true,
         },
         {
           field: "phoneNo",
-          headerName: "phoneNo",
+          headerName: "PhoneNo",
           type: "number",
           flex: 1,
           editable: true,
         },
         {
           field: "emailId",
-          headerName: "emailId",
+          headerName: "EmailId",
           flex: 1,
           editable: true,
         },
@@ -80,7 +85,9 @@ export const CommonConstants: ICommonConstants = {
     },
     teacher: {
       list: "b/G7FG",
-      header: "All Teachers",
+      listheader: "All Students",
+      addHeader:"Add Student",
+      editHeader :"edit Student",
       columns: [
         {
           field: "name",
