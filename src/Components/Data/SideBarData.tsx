@@ -14,7 +14,7 @@ const SideBarData = [
         path: "/studentDetails",
       },
       {
-        title: "Adminssion Form",
+        title: "Add Student",
         path: "/admissionForm",
       },
     ],
@@ -93,26 +93,38 @@ const SideBarData = [
     ],
   },
   {
-    title: "Exam",
+    title: "Subject",
     path: "#",
-    icon: "fa-check-square",
+    icon: "fa-book-open",
 
     subNav: [
       {
-        title: "Exam  Schedule",
+        title: "All Subjects",
         path: "/parents",
       },
       {
-        title: "Exam Grades ",
+        title: "Add New Subject",
         path: "/parentDetails",
       },
     ],
   },
-  {
-    title: "Subject",
-    path: "#",
-    icon: "fa-book-open",
-  },
+  // {
+  //   title: "Exam",
+  //   path: "#",
+  //   icon: "fa-check-square",
+
+  //   subNav: [
+  //     {
+  //       title: "Exam  Schedule",
+  //       path: "/parents",
+  //     },
+  //     {
+  //       title: "Exam Grades ",
+  //       path: "/parentDetails",
+  //     },
+  //   ],
+  // },
+ 
   // {
   //   title: "Class Routine",
   //   path: "#",

@@ -13,10 +13,11 @@ export const CommonFetch: React.FC<IProps> = ({ entity }) => {
   const [items, setItems] = useState([]);
   const [header,setHeader] = useState("");
   const [columns,setColumns]= useState<GridColDef[]>([]);
+  
 
   const fetchData = async () => {
     const data = await fetch(
-      `${CommonConstants.baseUrl}/${CommonConstants.entityMap[entity as keyof typeof CommonConstants.entityMap].list}`
+      `${CommonConstants.baseUrl}/${CommonConstants.entityMap[entity as keyof typeof CommonConstants.entityMap].list.link}`
     );
     const json = await data.json();
     setItems(json);
@@ -24,10 +25,10 @@ export const CommonFetch: React.FC<IProps> = ({ entity }) => {
   
   useEffect(() => {
     fetchData();
-    setHeader(CommonConstants.entityMap[entity as keyof typeof CommonConstants.entityMap].listheader);
-    setColumns(CommonConstants.entityMap[entity as keyof typeof CommonConstants.entityMap].columns)
+    setHeader(CommonConstants.entityMap[entity as keyof typeof CommonConstants.entityMap].list.listheader);
+    setColumns(CommonConstants.entityMap[entity as keyof typeof CommonConstants.entityMap].list.columns)
 
   }, []);
 
-  return <CommonList items={items} headertext={header} columns={columns}/>;
+  return <CommonList items={items} headertext={header} columns={columns} entity={entity}/>;
 };

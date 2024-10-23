@@ -23,9 +23,14 @@ function App() {
 
         },
         {
-          path:"/addstudents",
+          path:"/add-student",
           element:<CommonAddEdit entity="student" />
         },
+        {
+          path:"/add-teacher",
+          element:<CommonAddEdit entity="teacher" />
+        },
+
         
 
       ],

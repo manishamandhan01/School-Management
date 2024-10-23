@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { v4 as uuidv4 } from "uuid";
 import CommonAddEdit from "../AddEdit/CommonAddEdit";
+import { CommonConstants } from "../Common/Constants";
 
 interface IProps<T> {
   items: T[];
   headertext: string;
   columns: GridColDef[];
+  entity:string
 }
 
 export const CommonList = <T,>({
   items,
   headertext,
   columns,
+  entity
 }: IProps<T>): JSX.Element => {
+
+
+  
 
   return (
     <div>
@@ -25,7 +31,7 @@ export const CommonList = <T,>({
             </div>
             <div className="col-sm-6">
               <ol className="breadcrumb float-sm-right">
-                <li className="breadcrumb-item"><a href="#">ADD</a></li>
+                <li className="breadcrumb-item"><a href={`/add-${entity}`}>ADD</a></li>
               </ol>
             </div>
           </div>
