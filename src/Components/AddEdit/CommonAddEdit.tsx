@@ -2,6 +2,7 @@ import { GridColDef } from '@mui/x-data-grid';
 import React, { useEffect, useState } from 'react'
 import { CommonConstants } from '../Common/Constants';
 import { MenuItem, Select } from '@mui/material';
+import {IItem} from "../Elements/Input";
 
 interface IProps<T> {
     entity: string;
@@ -9,7 +10,7 @@ interface IProps<T> {
 }
 
 const CommonAddEdit = <T,>({ entity }: IProps<T>): JSX.Element => {
-    const [fields, setFields] = useState<GridColDef[]>();
+    const [fields, setFields] = useState<IItem[]>();
     const [headerText, setHeaderText] = useState("");
 
     useEffect(() => {
@@ -57,20 +58,21 @@ const CommonAddEdit = <T,>({ entity }: IProps<T>): JSX.Element => {
 
 
                                                     <div className="form-group">
-                                                        <label>{items?.headerName}</label>
-                                                        <input className="form-control" id={items.field} placeholder={`Enter ${items.headerName}`} />
+                                                        {/*<label>{items?.headerName}</label>*/}
+                                                        {/*<input className="form-control" id={items.field} placeholder={`Enter ${items.headerName}`} />*/}
+                                                        <div>{items?.type()}</div>
                                                         
-                                                        <Select
-                                                            labelId="demo-simple-select-label"
-                                                            id="demo-simple-select"
-                                                            value={10}
-                                                            label="Age"
-                                                            // onChange={handleChange}
-                                                        >
-                                                            <MenuItem value={10}>Ten</MenuItem>
-                                                            <MenuItem value={20}>Twenty</MenuItem>
-                                                            <MenuItem value={30}>Thirty</MenuItem>
-                                                        </Select>
+                                                        {/*<Select*/}
+                                                        {/*    labelId="demo-simple-select-label"*/}
+                                                        {/*    id="demo-simple-select"*/}
+                                                        {/*    value={10}*/}
+                                                        {/*    label="Age"*/}
+                                                        {/*    // onChange={handleChange}*/}
+                                                        {/*>*/}
+                                                        {/*    <MenuItem value={10}>Ten</MenuItem>*/}
+                                                        {/*    <MenuItem value={20}>Twenty</MenuItem>*/}
+                                                        {/*    <MenuItem value={30}>Thirty</MenuItem>*/}
+                                                        {/*</Select>*/}
 
                                                     </div>
 

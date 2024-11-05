@@ -4,13 +4,13 @@ import React, { ReactNode } from 'react'
 export interface IItem {
     field: string,
     headerName: string,
-    type:ReactNode,
+    type:() => JSX.Element,
 }
 export interface IProps{
       item : IItem
 }
 
-export const Input : React.FC<IProps>=({item})=> {
+export const Input : React.FC<IProps> = ({item}): JSX.Element => {
     
 
 
